@@ -2611,6 +2611,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
                 sp = try_get(sc, lambda x: x['sp'][0]) or 'signature'
                 fmt_url += '&' + sp + '=' + signature
 
+                
             if itag:
                 itags.append(itag)
                 stream_ids.append(stream_id)
@@ -2642,7 +2643,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
             if no_audio:
                 dct['vbr'] = tbr
             if no_video:
-                dct['abr'] = tbr
+                dct['abr'] = int(tbr)
             if no_audio or no_video:
                 dct['downloader_options'] = {
                     # Youtube throttles chunks >~10M
