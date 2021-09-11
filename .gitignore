@@ -2,7 +2,7 @@
 *.conf
 *.spec
 cookies
-cookies.txt
+*cookies.txt
 
 # Downloaded
 *.srt
@@ -19,6 +19,8 @@ cookies.txt
 *.wav
 *.ape
 *.mkv
+*.flac
+*.avi
 *.swf
 *.part
 *.part-*
